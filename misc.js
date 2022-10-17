@@ -33,7 +33,6 @@ let tcnt = document.querySelectorAll(".tgs-container");
         element.style.backgroundColor = "#303233"
       });
       dropbtn.forEach(element => {
-        element.style.backgroundColor = "#ffffff"
         element.style.color = "#303233"
       });
       bn59.forEach(element => {
@@ -74,7 +73,6 @@ let tcnt = document.querySelectorAll(".tgs-container");
         element.style.backgroundColor = "#ffffff"
       });
       dropbtn.forEach(element => {
-        element.style.backgroundColor = "transparent"
         element.style.color = "black"
       });
       bn59.forEach(element => {
