@@ -296,7 +296,7 @@
     color: black;
     padding: 10px;
     font-size: 16px;
-    border: 1px outset #242526;
+    border: none;
     cursor: pointer;
     margin-top: 3px;
     margin-right: 5px;
