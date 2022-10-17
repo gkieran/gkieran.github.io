@@ -350,7 +350,7 @@
     padding: 7px;
     margin: 3px;
     font-size: 16px;
-    border: 1px outset black;
+    border: none;
     cursor: pointer;
    display: inline-flex;
    align-items: center;
