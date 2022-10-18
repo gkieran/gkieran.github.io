@@ -33,7 +33,8 @@ let tcnt = document.querySelectorAll(".tgs-container");
         element.style.backgroundColor = "#303233"
       });
       dropbtn.forEach(element => {
-        element.style.color = "#303233"
+       // element.style.backgroundColor = "#ffffff"
+        element.style.color = "white"
       });
       bn59.forEach(element => {
         element.style.backgroundColor = "#303233"
@@ -73,6 +74,7 @@ let tcnt = document.querySelectorAll(".tgs-container");
         element.style.backgroundColor = "#ffffff"
       });
       dropbtn.forEach(element => {
+       // element.style.backgroundColor = "transparent"
         element.style.color = "black"
       });
       bn59.forEach(element => {
@@ -159,4 +161,5 @@ function hideGaben() {
     document.getElementById("gaben").style.visibility = "hidden";
 }
 setTimeout(hideGaben, byeGaben);
+
 
