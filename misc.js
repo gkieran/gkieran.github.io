@@ -162,4 +162,29 @@ function hideGaben() {
 }
 setTimeout(hideGaben, byeGaben);
 
+//cookie consent
+// define timeline
+const tl = gsap.timeline({ defaults: { duration: 0.4, ease: "power1.out" } });
+
+// slide up cookie bar
+tl.fromTo(".cookie-wrapper", { y: 400 }, { y: 0 });
+
+//cookie jump animation
+tl.fromTo(
+  ".cookie",
+  { y: 0, rotation: 0 },
+  { y: -20, rotation: "-20deg", yoyo: true, repeat: -1 }
+);
+
+// animate cookie crumbs
+tl.fromTo("#crumbs", { y: 0 }, { y: -20, yoyo: true, repeat: -1 }, "<");
+
+// get button
+const cookieBtn = document.querySelector(".cookie-btn");
+
+// slide down cookie bar on btn click
+cookieBtn.addEventListener("click", () => {
+  gsap.to(".cookie-wrapper", { y: 400, duration: 0.4, ease: "power1.out" });
+});
+
 
