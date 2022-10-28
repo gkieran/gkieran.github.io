@@ -19,6 +19,7 @@ body {
 
 .cube {
 	position: absolute;
+	z-index: -1;
 	top: 80vh;
 	left: 45vw;
 	width: 10px;
