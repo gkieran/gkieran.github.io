@@ -1,0 +1,156 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 500vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.cube {
+	position: absolute;
+	top: 80vh;
+	left: 45vw;
+	width: 10px;
+	height: 10px;
+	border: solid 1px #D7D4E4;
+	transform-origin: top left;
+	transform: scale(0) rotate(0deg) translate(-50%, -50%);
+	animation: cube 12s ease-in forwards infinite;
+	z-index: -1;
+  }
+  /*main header cubes*/
+  .cube:nth-child(2n) {
+	border-color: #FFF ;
+  }
+  .cube:nth-child(2) {
+	animation-delay: 2s;
+	left: 25vw;
+	top: 40vh;
+  }
+  .cube:nth-child(3) {
+	animation-delay: 4s;
+	left: 75vw;
+	top: 50vh;
+  }
+  .cube:nth-child(4) {
+	animation-delay: 6s;
+	left: 90vw;
+	top: 10vh;
+  }
+  .cube:nth-child(5) {
+	animation-delay: 8s;
+	left: 10vw;
+	top: 85vh;
+  }
+  .cube:nth-child(6) {
+	animation-delay: 10s;
+	left: 50vw;
+	top: 10vh;
+  }
+  /*projects header cubes*/
+  .cube:nth-child(7) {
+	animation-delay: 2s;
+	left: 25vw;
+	top: 140vh;
+  }
+  .cube:nth-child(8) {
+	animation-delay: 4s;
+	left: 75vw;
+	top: 150vh;
+  }
+  .cube:nth-child(9) {
+	animation-delay: 6s;
+	left: 90vw;
+	top: 120vh;
+  }
+  .cube:nth-child(10) {
+	animation-delay: 8s;
+	left: 10vw;
+	top: 185vh;
+  }
+  
+
+  @keyframes cube {
+	from {
+	  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+	  opacity: 1;
+	}
+	to {
+	  transform: scale(20) rotate(960deg) translate(-50%, -50%);
+	  opacity: 0;
+	}
+  }
+
+  /*loading screen*/
+  .lds-ellipsis {
+	display: inline-block;
+	position: relative;
+	width: 160px;
+	height: 160px;
+  }
+  .lds-ellipsis div {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	top: 33px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+	left: 8px;
+	animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+	left: 8px;
+	animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+	left: 32px;
+	animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+	left: 56px;
+	animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+	0% {
+	  transform: scale(0);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  @keyframes lds-ellipsis3 {
+	0% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(0);
+	}
+  }
+  @keyframes lds-ellipsis2 {
+	0% {
+	  transform: translate(0, 0);
+	}
+	100% {
+	  transform: translate(24px, 0);
+	}
+  }
+  /*Gaben Eyes*/
+
