@@ -212,7 +212,7 @@ display:none;
   /*dark mode alts*/
  .dark_mode {
     background-color: #242526;
-    color: white;
+    color: white !important;
   }
   .placeholder {
     background-color:#9e9e9e ;
