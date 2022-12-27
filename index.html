@@ -15,15 +15,6 @@
 
 
 </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2EL7MPKMQX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2EL7MPKMQX');
-</script>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -34,6 +25,37 @@
     </a>
    
     <button id="switchDm" class="w3-bar-item w3-button"><i id="d-ltoggle" class="fa-solid fa-moon"></i></button>
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      </style>
+      
+      <div class="dropdown w3-bar-item w3-button">
+        <span>Page Language</span>
+        <div class="dropdown-content" style="z-index: 1">
+          <a href="index.html" >English</a>
+          <a href="404.html" >Espanol</a>
+          <a href="404.html" >Francais</a>
+          <a href="404.html">Italiano</a>
+          </div>
+      </div>
+    
     <a href="#home" class="w3-bar-item w3-button"><i class="fa-solid fa-house"></i> HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
@@ -52,7 +74,7 @@
   <!--cookie consent-->
   <div id="cookie-popup">
     <p>COOKIE POLICY</p>
-    <p>In order to collect site analytics, we use cookies . By continuing to browse you accept that.</p>
+    <p>In order to collect site analytics, we use cookies . By continuing to browse you accept that. <br> nice ip address btw</p>
     <button id="cpbtn">ACCEPT & CLOSE</button>
   </div>
   <!--end cookie consent-->
@@ -66,34 +88,29 @@
   <h3 class="w3-center">ABOUT ME</h3>
   <p><h3>Hey there! I’m <dfn><abbr title="it's pronounced like 'Graham'">Graeme Kieran</abbr>
   </dfn>, maybe you’ve heard of me as bean_frog. <br>
-      I’m a student, free-time developer, and gamer from California. This is my personal portfolio page, which hopefully will expand to contain more of my projects in the future.</p>
+      I’m a high school student from California, and I enjoy playing games and coding in my free time. This is my personal portfolio page, which hopefully will expand to contain more of my projects in the future.</p>
   <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Graeme Kieran</b></p><br>
-      <img src="https://github.com/bean-frog/random-item-storage-for-cdns/blob/main/Snapchat-935562796.jpg?raw=true" class="w3-round w3-image " alt="Photo of Me" width="500" height="333">
     </div>
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>
-        Language Proficiency:
-      </p>
-       <p class="w3-wide"><i class="fa-solid fa-infinity"></i>Arduino C++</p>
-  <div class="w3-light-grey">
+    <div class="w3-row">
+    <div class="w3-col" style="width:49%">
+    <p class="w3-xlarge w3-center w3-padding-16">Language Confidence:</p>
+    <p class="w3-wide"><i class="fa-solid fa-infinity"></i>Arduino C++</p>
+    <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
   </div>
-   <p class="w3-wide"><i class="fa-brands fa-css3-alt"></i>CSS</p>
+  <p class="w3-wide"><i class="fa-brands fa-html5"></i>HTML</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa-brands fa-css3-alt"></i>CSS</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
   </div>
-      <p class="w3-wide"><i class="fa-brands fa-html5"></i>HTML</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-  </div>
- 
+  
   <p class="w3-wide"><i class="fa-brands fa-square-js"></i>JavaScript</p>
   <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:45%">45%</div>
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
   </div>
- 
   <p class="w3-wide"><i class="fa-solid fa-square-terminal"></i>Bash</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:30%">30%</div>
@@ -102,16 +119,27 @@
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:25%">25%</div>
   </div>
-    </div>
-  </div>
-  <p class="w3-xlarge w3-center w3-padding-16">Gaming Stats</p>
-  <p class="w3-wide">STEAM</p>
+</div>
+<div class="w3-col" style="width:2%">
+  <p></p>
+</div>
+<div class="w3-col" style="width:49%">
+  <p class="w3-xlarge w3-center w3-padding-16">Framework Confidence:</p>
+  <p class="w3-wide"><i class="fa-brands fa-css3"></i>w3.css</p>
   <div class="w3-light-grey">
-    <div id="steamstats"class="w3-container w3-padding-small " style="width:100%">Account Level: 29<br>Badges: 14<br>Profile Awards: 9</div>
-  </div>
-  <p class="w3-wide">CSGO</p>
-  <div class="w3-light-grey">
-    <div id="csgostats"class="w3-container w3-padding-small " style="width:100%">Skill Group: <img src="https://totalcsgo.com/image/ranks/skillgroup5.png" style="height: 40px; width: 100px"><br></div>
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
+</div>
+<p class="w3-wide"><i class="fa-sharp fa-solid fa-signal-stream"></i>jQuery</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
+</div>
+<p class="w3-wide"><i class="fa-brands fa-react"></i>ReactJS</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:20%">20%</div>
+</div>
+
+</div>
+</div>
   </div>
 </div>
 
@@ -125,7 +153,7 @@
     Languages Used
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">5+</span><br>
+    <span class="w3-xlarge">3+</span><br>
     Frameworks Used
   </div>
   <div class="w3-quarter w3-section">
@@ -140,7 +168,7 @@
 </div>
 <div class="w3-content w3-container w3-padding-64">
   <h3 class="w3-center">PROJECTS</h3>
-  <p class="w3-center"><em>Here are some of my projects<br> Click for more info</em></p><br>
+  <p class="w3-center"><em>Here are some projects I've been working on<br> Click the cards to go to their Github page.</em></p><br>
   <div class="w3-row-padding w3-center">
       <div class="w3-col m3">
         <a target="_blank"href="https://github.com/bean-frog/site-tweaks"><img src="https://gh-card.dev/repos/bean-frog/site-tweaks.svg?"></a>
@@ -160,20 +188,19 @@
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <a target="_blank" href="https://github.com/bean-frog/Arduino-Nano-3-Zone-LED-fader"><img src="https://gh-card.dev/repos/bean-frog/Arduino-Nano-3-Zone-LED-fader.svg"></a>
-        </div>
-
-    <div class="w3-col m3">
-      <img src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
-    </div>
-
-    <div class="w3-col m3">
       <a target="_blank" href="https://github.com/bean-frog/GoofyCleaner"><img src="https://gh-card.dev/repos/bean-frog/GoofyCleaner.svg"></a>
         </div>
 
     <div class="w3-col m3">
       <img src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
     </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="https://github.com/bean-frog/PVA"><img src="https://gh-card.dev/repos/bean-frog/PVA.svg"></a>
+    </div>
+        <div class="w3-col m3">
+          <img src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+        </div>    
   </div>
 </div>
   
@@ -203,88 +230,53 @@
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Bay Area, California, United States<br>
-       <a target ="_blank" href="mailto:ttvbeanfrog@gmail.com"><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i><span style="text-decoration:none" >Email: </span>ttvbeanfrog@gmail.com</a><br>
+        <i class="fa-solid fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="mailto:gkieran32855@gmail.com">gkieran32855@gmail.com</a><br>
       </div>
     </div>
   </div>
+  <p class="w3-large w3-center">Social Media</p>
+  <div class="wrapper">
+    <a style="text-decoration: none; color: black" target="_blank" href="https://twitter.com/beanfrog0"><li class="icon twitter">
+      <span class="tooltip">Twitter</span>
+      <span><i class="fab fa-twitter"></i></span>
+    </li></a>
+    <a style="text-decoration: none; color: black" target="_blank" href="https://www.instagram.com/beanfrog_/"><li class="icon instagram">
+      <span class="tooltip">Instagram</span>
+      <span><i class="fab fa-instagram"></i></span>
+    </li></a>
+    <a style="text-decoration: none; color: black" target="_blank" href="https://github.com/bean-frog"><li class="icon github">
+      <span class="tooltip">Github</span>
+      <span><i class="fab fa-github"></i></span>
+    </li></a>
+    <a style="text-decoration: none; color: black" target="_blank" href="https://www.youtube.com/channel/UCNMVVuayFXBImEGGfmVq3jw"><li class="icon youtube">
+      <span class="tooltip">Youtube</span>
+      <span><i class="fab fa-youtube"></i></span>
+    </li></a>
+    <a style="text-decoration: none; color: black" target="_blank" href="https://twitch.tv/bean_frog"><li class="icon twitch">
+        <span class="tooltip">Twitch</span>
+        <span><i class="fab fa-twitch"></i></span>
+      </li></a>
+    </li></a>
+    <a style="text-decoration: none; color: black" target="_blank" href="https://discord.gg/m67MzEWbNK"><li class="icon discord">
+        <span class="tooltip">Discord</span>
+        <span><i class="fab fa-discord"></i></span>
+      </li></a>
+      <a style="text-decoration: none; color: black" target="_blank" href="https://steamcommunity.com/profiles/76561199422305551"><li class="icon steam">
+        <span class="tooltip">Steam</span>
+        <span><i class="fab fa-steam"></i></span>
+      </li></a>
+      <a style="text-decoration: none; color: black" target="_blank" href="https://mushroom.gg/beanfrog"><li class="icon mushroomgg">
+        <span class="tooltip">Mushroom.gg</span>
+        <span><i class="fa-solid fa-mushroom"></i></span>
+      </li></a>
+</div>
 </div>
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="https://gkieran.github.io/old/gkieran.github.io-main/index.html" title="Old Site" target="_blank" class="w3-hover-text-green">Old version of this site</a></p>
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <div class="wrapper">
-      <a style="text-decoration: none; color: black" target="_blank" href="https://twitter.com/beanfrog0"><li class="icon twitter">
-        <span class="tooltip">Twitter</span>
-        <span><i class="fab fa-twitter"></i></span>
-      </li></a>
-      <a style="text-decoration: none; color: black" target="_blank" href="https://www.instagram.com/beanfrog_/"><li class="icon instagram">
-        <span class="tooltip">Instagram</span>
-        <span><i class="fab fa-instagram"></i></span>
-      </li></a>
-      <a style="text-decoration: none; color: black" target="_blank" href="https://github.com/bean-frog"><li class="icon github">
-        <span class="tooltip">Github</span>
-        <span><i class="fab fa-github"></i></span>
-      </li></a>
-      <a style="text-decoration: none; color: black" target="_blank" href="https://www.youtube.com/channel/UCNMVVuayFXBImEGGfmVq3jw"><li class="icon youtube">
-        <span class="tooltip">Youtube</span>
-        <span><i class="fab fa-youtube"></i></span>
-      </li></a>
-      <a style="text-decoration: none; color: black" target="_blank" href="https://twitch.tv/bean_frog"><li class="icon twitch">
-          <span class="tooltip">Twitch</span>
-          <span><i class="fab fa-twitch"></i></span>
-        </li></a>
-      </li></a>
-      <a style="text-decoration: none; color: black" target="_blank" href="https://discord.gg/m67MzEWbNK"><li class="icon discord">
-          <span class="tooltip">Discord</span>
-          <span><i class="fab fa-discord"></i></span>
-        </li></a>
-        <a style="text-decoration: none; color: black" target="_blank" href="https://steamcommunity.com/profiles/76561199422305551"><li class="icon steam">
-          <span class="tooltip">Steam</span>
-          <span><i class="fab fa-steam"></i></span>
-        </li></a>
-        <a style="text-decoration: none; color: black" target="_blank" href="https://mushroom.gg/beanfrog"><li class="icon mushroomgg">
-          <span class="tooltip">Mushroom.gg</span>
-          <span><i class="fa-solid fa-mushroom"></i></span>
-        </li></a>
-  </div>
-  </div>
-  <p>Made possible by <br> 
-    <a href="https://jquery.com" title="jQuery" target="_blank" class="w3-hover-text-green">jQuery</a></p>
-   <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-   <a href="https://fontawesome.com" title="FontAwesome" target="_blank" class="w3-hover-text-green">FontAwesome</a></p></footer>
-
- 
-<script>
-
-/*
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-*/
-
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
+  <p>Fun things:</p>
+  <a href="https://gkieran.github.io/old/gkieran.github.io-main/index.html" title="Old Site" target="_blank" class="w3-hover-text-green">Old version of this site</a></p>
+  <a href="https://gkieran.github.io/test-games/mario.html" title="Super mario" target="_blank" class="w3-hover-text-green">Mirror of supermarioemulator.com (useful for unblocking)</a></p>
 
 
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
 
 </body>
 <script src="misc.js" ></script>
