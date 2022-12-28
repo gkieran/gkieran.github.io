@@ -33,3 +33,17 @@ function toggleFunction() {
       x.className = x.className.replace(" w3-show", "");
   }
 }
+function setDark() {
+  $("html").toggleClass("dark_mode");
+  $("#steamstats").toggleClass("dark_mode");
+  $("#csgostats").toggleClass("dark_mode");
+  $("#d-ltoggle").toggleClass("fa-solid fa-sun");
+  $("#d-ltoggle").toggleClass("fa-solid fa-moon");
+}
+window.onload =     setDark();
+
+
+
+
+
+

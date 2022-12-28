@@ -18,20 +18,26 @@ html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('https://images.unsplash.com/photo-1556244573-c3686c0f0e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80');
+  background-image:url('https://images.unsplash.com/photo-1556244573-c3686c0f0e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80');
   min-height: 100%;
+
+
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
   background-image: url("https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
   min-height: 400px;
+
+
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
   background-image: url("https://images.unsplash.com/photo-1511300636408-a63a89df3482?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
   min-height: 400px;
+
+
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -237,3 +243,23 @@ display:none;
   .bn4:hover {
     opacity: 1;
   }
+  .textRainbow {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+
