@@ -42,8 +42,3 @@ function setDark() {
 }
 window.onload =     setDark();
 
-
-
-
-
-

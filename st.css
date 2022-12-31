@@ -9,7 +9,7 @@
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    height: 500px;
+    height: fit-content;
     
     margin: 5px
   }
@@ -106,4 +106,30 @@
     transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
   }
 
-  /**/
+  .card-guild {
+    padding: 0.6em 2em;
+    border: 1px groove white;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 5px 5px 10px #242526;
+    margin: 5px
+  }
+  .dropdown-guild {
+    padding: 0.6em 2em;
+    border: 1px groove white;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    height: fit-content;
+    margin: 3px
+  }
