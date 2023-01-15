@@ -28,6 +28,7 @@
         <button class="w3-bar-item w3-button" onclick="showPage('tweaks')">Site Tweaks</button>
         <button class="w3-bar-item w3-button" onclick="showPage('pva')">PVA</button>
         <button class="w3-bar-item w3-button" onclick="showPage('guild')">Assassins Guild Helper</button>
+        <button class="w3-bar-item w3-button" onclick="showPage('valAhk')">Valorant AHK Macros</button>
       </div>
       <div id="main" class="tab">
         <h1 class="w3-center">Welcome to P-HUB!</h1>
@@ -110,6 +111,10 @@ page coming soon, hang in there!
     <div class="w3-row">
         <div class="w3-third">
             <div id="scf" class="card-guild w3-center">
+                <div class="w3-panel w3-red">
+                    <h3>HEY!</h3>
+                    <p>some combinations are inaccurate. Report any errors to bean_frog#6968</p>
+                  </div> 
                 <h2 class="w3-center">Frenzy/SCF Kill Effects</h2>
                 <h3 class="w3-center">Attacker is:</h3>
                 <select id="attackerSel" class="dropdown-guild">
@@ -146,8 +151,79 @@ page coming soon, hang in there!
                 <h3 class="card-guild" id="outcome">
                 </h3>
     </div>
+    <div id="troll" class="card-guild w3-center">
+        <h2 class="w3-center">Trolling </h2>
+                <button class="w3-center card-guild"id="randomTroll">troll</button>
+                <h3 class="card-guild" id="newClass">
+                </h3>
+    </div>
         </div>
         </div>
+</div>
+<div id="valAhk"style="display:none" class="tab">
+    <h1 id="title" class="w3-center w3-xxxlarge">ValorAnt AutoHotkey MAcros</h1>
+    <h2 class="w3-center">add desc later</h2>
+
+
+    <div class="w3-row">
+        <div class="w3-col l6 m6 testCard">
+            <h4>Non-Toggling Macros</h4>
+            <h5 class="w3-border-red w3-bottombar">These macros do not require toggling (to avoid suspicion). They can be combined into one script with the button below.</h5>
+            <form class="checkboxes w3-col m4 l4">
+                <input type="checkbox" id="instalockSova" value="string1"> Instalock Sova<br>
+                <input type="checkbox" id="instaJett" value="string2"> Instalock Jett<br>
+                <input type="checkbox" id="instaSage" value="string3"> Instalock Sage<br>
+                <input type="checkbox" id="instaSkye" value="string4"> Instalock Skye<br>
+                <input type="checkbox" id="instaHarbor" value="string5"> Instalock Harbor<br>
+                <input type="checkbox" id="instaChamber" value="string6"> Instalock Chamber<br>
+                <input type="checkbox" id="instaRaze" value="string7"> Instalock Raze<br>
+                <input type="checkbox" id="instaPhoenix" value="string8"> Instalock Phoenix<br>
+                <input type="checkbox" id="instaOmen" value="string9"> Instalock Omen<br>
+                <input type="checkbox" id="instaReyna" value="string10"> Instalock Reyna<br>
+            </form>
+            <form class="checkboxes w3-col m4 l4">
+                <input type="checkbox" id="instaNeon" value="string11"> Instalock Neon<br>
+                <input type="checkbox" id="instaBreach" value="string12"> Instalock Breach<br>
+                <input type="checkbox" id="instaBrimstone" value="string13"> Instalock Brimstone<br>
+                <input type="checkbox" id="instaAstra" value="string14"> Instalock Astra<br>
+                <input type="checkbox" id="instaKilljoy" value="string15"> Instalock Killjoy<br>
+                <input type="checkbox" id="instaViper" value="string16"> Instalock Viper<br>
+                <input type="checkbox" id="instaYoru" value="string17"> Instalock Yoru<br>
+                <input type="checkbox" id="instaKayo" value="string18"> Instalock Kayo<br>
+                <input type="checkbox" id="instaCypher" value="string19"> Instalock Cypher<br>
+                <input type="checkbox" id="instaFade" value="string20"> Instalock Fade<br>
+            </form>
+
+            <form class="checkboxes w3-col m4 l4">
+                <input class="disabledBox"type="checkbox" id="vandalHeavy" value="vandalHeavy" disabled> Purchase Vandal and Heavy Shields<br>
+                <input class="disabledBox"type="checkbox" id="phantomHeavyMacro" value="phantomHeavyMacro" disabled> Purchase Phantom and Heavy Shields<br>
+                <input class="disabledBox"type="checkbox" id="fullUtil" value="fullUtil" disabled>Purchase all utility<br>
+                <input class="disabledBox"type="checkbox" id="oneEachUtil" value="oneEachUtil" disabled> Purchase one of each type of utility<br>
+                <input class="disabledBox"type="checkbox" id="GGMacro" value="GGMacro" disabled> Quick GG<br>
+                <input class="disabledBox"type="checkbox" id="EZMacro" value="EZMacro" disabled> Quick EZ<br>
+            </form>
+            <br>
+            <div class="w3-row">
+				<div class="w3-col m12 l12 w3-center">
+                <button id="append-button">Generate Script</button>
+                <br>
+                <button id="copyButton">Copy Script</button>
+                <br> 
+                <div class="output-wrapper w3-border-black w3-leftbar" style="text-align: left">
+                  
+                    <code class="output" id="output" style="text-align: left"></code>
+                </div>
+            </div>
+			</div>
+
+        </div>
+
+        <div class="w3-col l6 m6 testCard">
+            <h4>Toggled Macros</h4>
+            <h5 class="w3-border-red w3-bottombar">These macros probably need to be toggled to avoid suspicion. Run them in separate scripts.</h5>
+			<button id="bhop" class="w3-center btn-main">Bhop</button>
+        </div>
+    </div>
 </div>
 
     

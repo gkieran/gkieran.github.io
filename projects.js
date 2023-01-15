@@ -7,6 +7,194 @@ function showPage(pageName) {
     document.getElementById(pageName).style.display = "block";
   }
 
+  const instaSova = `
+  f2::
+    Click, 1083, 930
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  //add coordinates and clicks
+  const instaJett = `
+  f2::
+    Click, 831, 925
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaSage = `
+  f2::
+    Click, 997, 920
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaSkye = `
+  f2::
+    Click, 1117, 1015
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaHarbor = `
+  f2::
+    Click, 585, 1007
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaChamber = `
+  f2::
+    Click, 748, 929
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaRaze = `
+  f2::
+    Click, 1000, 1000
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaPhoenix = `
+  f2::
+    Click, 920, 920
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaOmen = `
+  f2::
+    Click, 915, 1010
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaReyna = `
+  f2::
+    Click, 1086, 1015
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaNeon = `
+  f2::
+    Click, 825, 1015
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaFade = `
+  f2::
+    Click, 1337, 925
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaBreach = `
+  f2::
+    Click, 571, 921
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaBrimstone = `
+  f2::
+    Click, 661, 930
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaAstra = `
+  f2::
+    Click, 1171, 928
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaKilljoy = `
+  f2::
+    Click, 740, 1015
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaViper = `
+  f2::
+    Click, 1253, 1015
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaYoru = `
+  f2::
+    Click, 1337, 1015
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaKayo = `
+  f2::
+    Click, 668, 1015
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  const instaCypher = `
+  f2::
+    Click, 1252, 928
+    Sleep, 200
+    Click, 950, 813
+  return
+  `
+  
+  
+  
+  const vandalHeavy = `
+  f3::
+    Send, b
+    Sleep, 300
+    Click, 908, 660
+    Sleep, 300
+    Click, 1443, 600
+    Sleep, 100
+    Send, {Escape}
+  return
+  `
+  
+  const instaGG = `
+  f4:: 
+    Send, {Shift+Enter}
+    Sleep, 50
+    Send, g
+    Sleep, 50
+    Send, g
+    Sleep, 100
+    Send, {Enter}
+  return
+  `
+  const instaEz = `
+  f5::
+    Send, {Shift+Enter}
+    Sleep, 50
+    Send, e
+    Sleep, 50
+    Send, z
+    Sleep, 100
+    Send, {Enter}
+  return
+  `
+  const fullUtilRegular = `
+  f6::
+  return
+  `
+  const fullUtilChamber = `
+  f7::
+  return
+  `
+  
+
   //assassins guild thing
 //missing: classic, overkill, stealth, supercharged
   const outcomeMap = { //  'Attacker-Victim': 'Outcome',
@@ -158,7 +346,7 @@ function showPage(pageName) {
 'Supercharged-Poison': 'Poison Dies',
 'Supercharged-Troll': 'Troll dies',
 'Supercharged-Battery': 'Battery shield negates if available',
-'Supercharged-Radioactive': 'Overkill is given radiation sickness for one week, Radioactive dies',
+'Supercharged-Radioactive': 'Supercharged is given radiation sickness for one week, Radioactive dies',
 'Supercharged-Solar': 'Solar dies',
 'Supercharged-Electromagnet': 'Electromagnet Dies',
 'Supercharged-Classic': 'Classic Dies',
@@ -180,3 +368,92 @@ function showPage(pageName) {
   attackerSel.addEventListener('change', checkSelection);
   victimSel.addEventListener('change', checkSelection);
 
+  function troll(arr) {
+    var index = Math.floor(Math.random() * arr.length);
+    return arr[index];
+  }
+  var arr = ['Oxford', 'Evasive', 'Poison', 'Battery', 'Radioactive', 'Solar', 'Electromagnet', "Classic", "Overkill", "Stealth", "Supercharged" ];
+  var newClass = troll(arr);
+  var button = document.querySelector('#randomTroll');
+  button.addEventListener('click', function() {
+    var newClass = troll(arr);
+    document.querySelector('#newClass').innerHTML = newClass
+  });
+  let strings = {
+    string1: instaSova,
+    string2: instaJett,
+    string3: instaSage,
+	string4: instaSkye,
+	string5: instaHarbor,
+	string6: instaChamber,
+	string7: instaRaze,
+	string8: instaPhoenix,
+	string9: instaOmen,
+	string10: instaReyna,
+	string11: instaNeon,
+	string12: instaFade,
+	string13: instaBreach,
+	string14: instaBrimstone,
+	string15: instaKilljoy,
+	string16: instaViper,
+	string17: instaYoru,
+	string18: instaKayo,
+	string19: instaCypher,
+	string20: instaFade,
+    string21: vandalHeavy,
+};
+$('#append-button').on('click', function() {
+    $('#output').empty(); // clear the contents of the "output" div
+    let selectedString = '';
+    $('input[type=checkbox]:checked').each(function() {
+        selectedString += strings[$(this).val()];
+    });
+    $('#output').append(selectedString);
+});
+
+let bhop =  document.getElementById("bhop");
+bhop.addEventListener('click', showModal);
+function showModal() {
+	document.getElementById('id01').style.display='block'
+}
+
+const copyButton = document.querySelector('#copyButton');
+const codeCopy = document.querySelector('#output');
+
+
+copyButton.addEventListener('click', async function() {
+    if(codeCopy.innerText.length == 0) {
+        alert("Nothing Generated! Select some checkboxes and press 'Generate Script' first.");
+    } else {
+
+  try {
+    await navigator.clipboard.writeText(codeCopy.innerText);
+    alert("Script copied! Paste into a new AHK document.");
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+}
+});
+const copyBhop = document.querySelector("#bhop");
+const bhopCopy = `
+F1::                 
+	Suspend
+	Return
+*space::
+	Loop                                                                                                                
+	{
+		GetKeyState,state,space,P
+		If state = U
+			Break
+		Send,{space}              
+		Sleep,20
+	}  
+`
+copyBhop.addEventListener('click', async function() {
+  try {
+    await navigator.clipboard.writeText(bhopCopy.innerText);
+    alert("Script copied! Paste into a new AHK document.");
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+});
