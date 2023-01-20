@@ -457,3 +457,14 @@ copyBhop.addEventListener('click', async function() {
     console.error('Failed to copy text: ', err);
   }
 });
+
+$.fn.extend({
+  toggleText: function(a, b){
+      return this.text(this.text() == b ? a : b);
+  }
+});
+
+$("#togInst").click(function(){
+  $("#inst").toggle();
+$("#togInst").toggleText('Show INSTRUCTIONS.md', 'Hide INSTRUCTIONS.md');
+        });

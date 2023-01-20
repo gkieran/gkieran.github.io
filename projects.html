@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js"></script>
     <title>Projects</title>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -30,11 +31,14 @@
         <button class="w3-bar-item w3-button" onclick="showPage('guild')">Assassins Guild Helper</button>
         <button class="w3-bar-item w3-button" onclick="showPage('valAhk')">Valorant AHK Macros</button>
       </div>
-      <div id="main" class="tab">
-        <h1 class="w3-center">Welcome to P-HUB!</h1>
+      <div id="app" style="z-index: 1; height: 100%"class="tab">
+        
+            <h1 class="w3-center">Welcome to P-HUB!</h1>
         <h2 class="w3-center">The "P" stands for Projects... obviously</h2>
         <h2 class="w3-center">try clicking one of those tabs up there</h2>
-      </div>
+     
+        </div>
+        
     <div id="tweaks" style="display:none" class="tab">
         <h1 class="w3-center w3-xxxlarge">Site Tweaks!</h1>
         <h2 class="w3-center w3-medium">These style and UX tweaks are a little side project I've been working on in my spare time for a little while. I hope you enjoy! <br> See README.md in the <a target="_blank"href="https://github.com/bean-frog/site-tweaks">GitHub repo</a> for more installation info. <br> This project is still in development, so feel free to <a href="https://gkieran.github.io/#contact">contact me</a>  with any ideas!</h2>
@@ -60,6 +64,24 @@
                         <h6>Background Cycler</h6>
                        <a target="_blank" href="https://github.com/bean-frog/site-tweaks/blob/main/pausd.schoology.com/backgroundCycler.user.js" class="bn3637 bn37"><i class="fa-brands fa-github"></i></a>  <a target="_blank" href="https://github.com/bean-frog/site-tweaks/raw/main/pausd.schoology.com/backgroundCycler.user.js" class="bn3637 bn37"><i class="fa-regular fa-download"></i></a>
                       </div>
+                      <div class="bn5 w3-center" style="height: fit-content; width: fit-content">
+                        <h6>Fake Cloudflare DDOS page</h6>
+                       <a target="_blank" href="https://github.com/bean-frog/site-tweaks/blob/main/pausd.schoology.com/notfakeddos.user.js" class="bn3637 bn37"><i class="fa-brands fa-github"></i></a>  <a target="_blank" href="https://github.com/bean-frog/site-tweaks/raw/main/pausd.schoology.com/notfakeddos.user.js" class="bn3637 bn37"><i class="fa-regular fa-download"></i></a>
+                      </div>
+    
+                      </div>
+        
+                </div>
+                <div class="bn5 w3-center">
+                    <h2>All websites</h2>
+                    <h5>(really stupid shit idk why i made these)</h5><br>
+                    <div  style="display:flex; flex-wrap:wrap; align-items:flex-start" >
+                    <div class="bn5 w3-center" style="height: fit-content; width: fit-content;  ">
+                        <h6>fuckYou.js</h6>
+                       <a target="_blank" href="https://github.com/bean-frog/site-tweaks/blob/main/every%20website%20ever/fuckyoulol.user.js" class="bn3637 bn37"><i class="fa-brands fa-github"></i></a>  <a target="_blank" href="https://github.com/bean-frog/site-tweaks/raw/main/every%20website%20ever/fuckyoulol.user.js" class="bn3637 bn37"><i class="fa-regular fa-download"></i></a>
+                      </div>
+    
+                      
     
                       </div>
         
@@ -151,19 +173,23 @@ page coming soon, hang in there!
                 <h3 class="card-guild" id="outcome">
                 </h3>
     </div>
-    <div id="troll" class="card-guild w3-center">
-        <h2 class="w3-center">Trolling </h2>
-                <button class="w3-center card-guild"id="randomTroll">troll</button>
-                <h3 class="card-guild" id="newClass">
-                </h3>
-    </div>
+        </div>
+        <div class="w3-third">
+            <div id="troll" class="card-guild w3-center">
+                <h2 class="w3-center">Trolling </h2>
+                        <button class="w3-center card-guild"id="randomTroll">troll</button>
+                        <h3 class="card-guild" id="newClass">
+                        </h3>
+            </div>
         </div>
         </div>
+        
 </div>
 <div id="valAhk"style="display:none" class="tab">
     <h1 id="title" class="w3-center w3-xxxlarge">ValorAnt AutoHotkey MAcros</h1>
-    <h2 class="w3-center">add desc later</h2>
-
+    <div class="w3-center"><button id="togInst" class="w3-center">Show INSTRUCTIONS.md</button></div>
+   <div id="inst" style="display: none; width:100%; padding-left: 25%; padding-right: 25%;" ><script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fbean-frog%2FValorant-Macros-AHK-%2Fblob%2Fmain%2FINSTRUCTIONS.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on&fetchFromJsDelivr=on"></script>
+</div> 
 
     <div class="w3-row">
         <div class="w3-col l6 m6 testCard">
@@ -234,4 +260,5 @@ page coming soon, hang in there!
 </body>
 <script src="assassins.jsx"></script>
 <script src="projects.js"></script>
+
 </html>
