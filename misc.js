@@ -8,7 +8,6 @@ $("#cpbtn").click(function() {
 $(function() {
   $("#switchDm").click(function() {
     $("html").toggleClass("dark_mode");
-    $("html").toggleClass("w3-light-grey");
     $("#steamstats").toggleClass("dark_mode");
     $("#csgostats").toggleClass("dark_mode");
     $("#d-ltoggle").toggleClass("fa-solid fa-sun");
