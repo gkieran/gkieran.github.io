@@ -29,6 +29,7 @@
 
 <body class="w3-dark-grey">
     <div class="w3-bar w3-black">
+		<a href="https://gkieran.github.io" class="w3-bar-item w3-button"><i class="fa-solid fa-arrow-left"></i> Back Home</a>
         <button class="w3-bar-item w3-button" onclick="showGame('Slope')">Slope</button>
     </div>
     <div id="main" class="tab">
@@ -50,6 +51,7 @@
                 x[i].style.display = "none";
             }
             document.getElementById(gameTitle).style.display = "block";
+			document.getElementById("main").style.display = 'none'
         }
     </script>
 </body>
