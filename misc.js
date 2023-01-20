@@ -41,4 +41,3 @@ function setDark() {
   $("#d-ltoggle").toggleClass("fa-solid fa-moon");
 }
 window.onload =     setDark();
-
