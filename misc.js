@@ -13,7 +13,7 @@ $(function() {
     $("#csgostats").toggleClass("dark_mode");
     $("#d-ltoggle").toggleClass("fa-solid fa-sun");
     $("#d-ltoggle").toggleClass("fa-solid fa-moon");
-    $("div").toggleClass("w3-light-grey);
+    $("div").toggleClass("lightText");
   });
 });
 window.onscroll = function() {replace()};
