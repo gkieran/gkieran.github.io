@@ -32,6 +32,7 @@
 		<a href="https://gkieran.github.io" class="w3-bar-item w3-button"><i class="fa-solid fa-arrow-left"></i> Back Home</a>
         <button class="w3-bar-item w3-button" onclick="showGame('Slope')">Slope</button>
         <button class="w3-bar-item w3-button" onclick="showGame('2048')">2048</button>
+        <button class="w3-bar-item w3-button" onclick="showGame('tictactoe')">Tic-Tac-Toe</button>
 
     </div>
     <div id="main" class="tab">
@@ -49,6 +50,13 @@
         <p>w sigma moment based gaem</p>
         <iframe src='/basedgaming/embeds/2048/index.html' style='height: 75vh; width: 85%'></iframe>
     </div>
+    <div id="tictactoe" class="game w3-center" style='display:none'>
+        <h2>Tic-Tac-Toe</h2>
+        <p>w sigma moment based gaem</p>
+        <button id="newgame">Reset</button>
+        <br>
+        <iframe id="ttt-frame" src='/basedgaming/embeds/tictactoe/index.html' style='height: 75vh; width: 85%'></iframe>
+    </div>
 
     <script>
         function showGame(gameTitle) {
@@ -60,6 +68,10 @@
             document.getElementById(gameTitle).style.display = "block";
 			document.getElementById("main").style.display = 'none'
         }
+        document.getElementById("newgame").addEventListener("click", function(){
+  document.getElementById("ttt-frame").src = document.getElementById("ttt-frame").src;
+});
+
     </script>
 </body>
 
