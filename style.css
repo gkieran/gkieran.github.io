@@ -306,3 +306,7 @@ display:none;
   z-index: -1;
   top: 0;
 }
+
+.lightText {
+  color: #f9f9f9 !important:
+}
