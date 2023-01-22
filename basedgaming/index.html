@@ -91,7 +91,8 @@
         document.getElementById("newgame").addEventListener("click", function(){
   document.getElementById("ttt-frame").src = document.getElementById("ttt-frame").src;
 });
-
+var iframes = document.getElementsByTagName("iframe");
+iframes[0].contentWindow.focus();
     </script>
 </body>
 
