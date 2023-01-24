@@ -153,8 +153,9 @@
         <h2>Shellshocker</h2>
         <p>w sigma moment based gaem</p>
     
+        <div class=w3-center><button class="card-guild w3-center" id="shellFs">Fullscreen</button></div>
+        <iframe id="shell"src='/basedgaming/embeds/shellshockers/index.html' style='height: 75vh; width: 85%'></iframe>
         
-        <iframe src='/basedgaming/embeds/shellshockers/index.html' style='height: 75vh; width: 85%'></iframe>
         <div class="card-guild w3-center">
             <h3>Source Code: <a href="https://github.com/gkieran/gkieran.github.io/tree/main/basedgaming/embeds/shellshockers"><i class="fa-brands fa-github w3-xlarge"></i></a></h3>
         </div>
@@ -174,6 +175,19 @@
 });
 var iframes = document.getElementsByTagName("iframe");
 iframes[0].contentWindow.focus();
+
+var iframe = document.getElementById("shell");
+var fullscreenBtn = document.getElementById("shellFs");
+
+fullscreenBtn.addEventListener("click", function() {
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) {
+    iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) {
+    iframe.webkitRequestFullscreen();
+  }
+});
     </script>
 </body>
 
