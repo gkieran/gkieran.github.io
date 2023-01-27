@@ -26,7 +26,7 @@
   text-align: center;
   margin-top: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .deeznuts1 {
     font-size: 6vw;
   }
