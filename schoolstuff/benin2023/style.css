@@ -26,3 +26,11 @@
   text-align: center;
   margin-top: 30px;
 }
+@media (max-width: 600px) {
+  .deeznuts1 {
+    font-size: 2vw;
+  }
+  .deeznuts2 {
+    font-size: 1vw;
+  }
+}
