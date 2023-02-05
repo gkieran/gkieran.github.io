@@ -1,0 +1,36 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #242526;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+.thumbnail {
+  background-color: light-grey;
+  border: 1px groove #242526;
+  margin: 20px;
+}
+.vis{
+  height: 150px;
+  width: 100%;
+}
+.sources {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #242526;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+@media (max-width: 1000px) {
+  .deeznuts1 {
+    font-size: 6vw;
+  }
+  .deeznuts2 {
+    font-size: 5vw;
+  }
+}
