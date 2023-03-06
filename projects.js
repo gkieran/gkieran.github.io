@@ -372,7 +372,7 @@ function showPage(pageName) {
     var index = Math.floor(Math.random() * arr.length);
     return arr[index];
   }
-  var arr = ['Oxford', 'Evasive', 'Poison', 'Battery', 'Radioactive', 'Solar', 'Electromagnet', "Classic", "Overkill", "Stealth", "Supercharged" ];
+  var arr = ['Oxford', 'Evasive', 'Poison', 'Battery', 'Radioactive', 'Solar', 'Electromagnet', "Classic", "Overkill", "Stealth", "Supercharged", "Troll" ];
   var newClass = troll(arr);
   var button = document.querySelector('#randomTroll');
   button.addEventListener('click', function() {
