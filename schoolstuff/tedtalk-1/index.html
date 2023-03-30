@@ -120,19 +120,21 @@
        <h6 style="transform: translateY(270px)"> Or click <a href='info'>here</a></h6>
       </div>
       <script>
-       // Get all elements on the page with an ID
+// Get all elements on the page with an ID
 const elements = document.querySelectorAll("[id]");
 
-// Define the keycodes for the left and right arrow keys
-const LEFT_ARROW_KEYCODE = 33;
-const RIGHT_ARROW_KEYCODE = 34;
+// Define the keycodes for the left and right arrow keys, and the Page Up and Page Down keys
+const LEFT_ARROW_KEYCODE = 37;
+const RIGHT_ARROW_KEYCODE = 39;
+const PAGE_UP_KEYCODE = 33;
+const PAGE_DOWN_KEYCODE = 34;
 
 // Define a variable to keep track of the current element's index
 let currentIndex = -1;
 
-// Add event listeners for the left and right arrow keys
+// Add event listeners for the left and right arrow keys, and the Page Up and Page Down keys
 document.addEventListener("keydown", function(event) {
-  if (event.keyCode === RIGHT_ARROW_KEYCODE) { // right arrow key
+  if (event.keyCode === RIGHT_ARROW_KEYCODE || event.keyCode === PAGE_DOWN_KEYCODE) { // right arrow key or Page Down key
     event.preventDefault(); // prevent default browser behavior
     // Get the index of the next element with an ID
     const nextIndex = getNextIndex();
@@ -141,7 +143,7 @@ document.addEventListener("keydown", function(event) {
       elements[nextIndex].scrollIntoView({ behavior: "smooth" });
       currentIndex = nextIndex;
     }
-  } else if (event.keyCode === LEFT_ARROW_KEYCODE) { // left arrow key
+  } else if (event.keyCode === LEFT_ARROW_KEYCODE || event.keyCode === PAGE_UP_KEYCODE) { // left arrow key or Page Up key
     event.preventDefault(); // prevent default browser behavior
     // Get the index of the previous element with an ID
     const prevIndex = getPrevIndex();
@@ -173,6 +175,25 @@ function getPrevIndex() {
   return -1;
 }
 
+      </script>
+      <script>
+        // add event listener for keydown events
+document.addEventListener("keydown", function(event) {
+  // check if "f" key was pressed and site is focused
+  if (event.key === "f" && document.hasFocus()) {
+    // toggle full screen mode
+    var doc = window.document;
+    var docEl = doc.documentElement;
+    var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+    if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+      requestFullScreen.call(docEl);
+    } else {
+      cancelFullScreen.call(doc);
+    }
+  }
+});
       </script>
 </body>
 </html>
