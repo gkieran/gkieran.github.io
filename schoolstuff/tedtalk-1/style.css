@@ -39,11 +39,9 @@ p {
 
 img {
   position: absolute;
-  top: 46%;
-  left: 42%;
-  width: 320px;
-  height: 240px;
-  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  
+  height: 250px;
+  width: 250px;
   padding: 10px;
   border-radius: 5px;
   background: rgba(240,230,220, .7);
@@ -63,9 +61,6 @@ figure{
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 }
 
-img:last-of-type {
-  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
-}
 
 .slide:before {
   content: "";
@@ -140,64 +135,20 @@ img:last-of-type {
 }
 
 #slide5:before {
-  background-image: url("https://picsum.photos/960/400");
+  background-image: url("https://github.com/gkieran/gkieran.github.io/blob/main/schoolstuff/tedtalk-1/img/policecar.avif?raw=true");
   transform: translateZ(-1px) scale(2);
 }
 
 #slide6 {
-  background-image: url("https://picsum.photos/980/600");
+  background-image: url("https://github.com/gkieran/gkieran.github.io/blob/main/schoolstuff/tedtalk-1/img/homeless.avif?raw=true");
   z-index:2;
 }
 
 #slide7:before {
-  background-image: url("https://picsum.photos/960/520");
+  background-image: url("https://github.com/gkieran/gkieran.github.io/blob/main/schoolstuff/tedtalk-1/img/scales.avif?raw=true");
   transform: translateZ(-1px) scale(2);
 }
 
-#slide8 {
-  background-image: url("https://picsum.photos/960/400");
-  z-index:2;
-}
-
-#slide9:before {
-  background-image: url("https://picsum.photos/980/600");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide10 {
-  background-image: url("https://picsum.photos/960/520");
-  z-index:2;
-}
-
-#slide11:before {
-  background-image: url("https://picsum.photos/960/400");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide12 {
-  background-image: url("https://picsum.photos/980/600");
-  z-index:2;
-}
-
-#slide13:before {
-  background-image: url("https://picsum.photos/960/520");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide14 {
-  background-image: url("https://picsum.photos/960/400");
-  z-index:2;
-}
-
-#slide15:before {
-  background-image: url("https://picsum.photos/980/600");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide16 {
-  background-image: url("https://picsum.photos/960/520");
-  z-index:2;
-}
 
 #slide17 {
   background: #222;
