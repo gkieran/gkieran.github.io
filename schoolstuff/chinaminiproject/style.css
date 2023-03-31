@@ -82,7 +82,7 @@ img:last-of-type {
   width: 50%;
   padding: 5%;
   border-radius: 5px;
-  background: rgba(240,230,220, .7);
+  background: rgba(240,230,220, .85);
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 }
 
@@ -108,7 +108,7 @@ img:last-of-type {
 }
 
 #title {
-  background-image: url("https://picsum.photos/640/480");
+  background-image: url("img/uighur.avif");
   z-index:2;
 }
 
@@ -119,84 +119,31 @@ img:last-of-type {
 }
 
 #slide1:before {
-  background-image: url("https://picsum.photos/960/520");
+  background-image: url("img/uyghur.jpg");
   transform: translateZ(-1px) scale(2);
 }
 
 #slide2 {
-  background-image: url("https://picsum.photos/960/400");
+  background-image: url("img/camp.avif");
   z-index:2;
 }
 
 #slide3:before {
-  background-image: url("https://picsum.photos/980/600");
+  background-image: url("img/china.avif");
   transform: translateZ(-1px) scale(2);
 }
 
 #slide4 {
-  background-image: url(https://picsum.photos/960/520);
+  background-image: url("img/barbedwire.avif");
   z-index:2;
 }
 
 #slide5:before {
-  background-image: url("https://picsum.photos/960/400");
+  background-image: url("img/demo.avif");
   transform: translateZ(-1px) scale(2);
 }
 
-#slide6 {
-  background-image: url("https://picsum.photos/980/600");
-  z-index:2;
-}
 
-#slide7:before {
-  background-image: url("https://picsum.photos/960/520");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide8 {
-  background-image: url("https://picsum.photos/960/400");
-  z-index:2;
-}
-
-#slide9:before {
-  background-image: url("https://picsum.photos/980/600");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide10 {
-  background-image: url("https://picsum.photos/960/520");
-  z-index:2;
-}
-
-#slide11:before {
-  background-image: url("https://picsum.photos/960/400");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide12 {
-  background-image: url("https://picsum.photos/980/600");
-  z-index:2;
-}
-
-#slide13:before {
-  background-image: url("https://picsum.photos/960/520");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide14 {
-  background-image: url("https://picsum.photos/960/400");
-  z-index:2;
-}
-
-#slide15:before {
-  background-image: url("https://picsum.photos/980/600");
-  transform: translateZ(-1px) scale(2);
-}
-
-#slide16 {
-  background-image: url("https://picsum.photos/960/520");
-  z-index:2;
-}
 
 #slide17 {
   background: #222;
