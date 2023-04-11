@@ -1,2 +1,3 @@
 gigachad w3.css and jquery user <br>
-imagine using react bruh
+"who cares about angles? i want reactions and views"
+- Angular.js disliker
