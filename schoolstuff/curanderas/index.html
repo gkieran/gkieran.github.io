@@ -13,9 +13,25 @@
         </div>
         <div id="open-button" style="height: 200px; width: 200px;"></div>
       </div>
-    <img id="museum" src="img/museum.png" alt="museum">
+    <img id="museum" src="https://gkieran.github.io/schoolstuff/curanderas/img/museum.png" alt="museum">
   </div>
-  <iframe id="content" src="content.html" style="display:none"></iframe>
   <script src="main.js"></script>
+  <script>
+      document.addEventListener('keydown', function(event) {
+            // Check if 'f' key is pressed
+            if (event.key === 'f' || event.keyCode === 70) {
+                var docElm = document.documentElement;
+                if (docElm.requestFullscreen) {
+                    docElm.requestFullscreen();
+                } else if (docElm.mozRequestFullScreen) { // Firefox
+                    docElm.mozRequestFullScreen();
+                } else if (docElm.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    docElm.webkitRequestFullscreen();
+                } else if (docElm.msRequestFullscreen) { // IE/Edge
+                    docElm.msRequestFullscreen();
+                }
+            }
+        });
+  </script>
 </body>
 </html>
