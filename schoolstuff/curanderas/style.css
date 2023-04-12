@@ -13,8 +13,8 @@ body {
   #popup-container {
     position: absolute;
     display: inline-block;
-    left: 45%;
-    top: 60%;
+    left: 42%;
+    top: 50%
   }
   
   .popup-content {
