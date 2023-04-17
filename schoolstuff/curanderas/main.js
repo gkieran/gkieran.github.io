@@ -164,7 +164,7 @@ document.getElementById("open-button").addEventListener("click", function() {
               <div class="exhibit-room" id="exhibit5"><strong>Exhibit 5:</strong><br>Who are Las Curanderas?</div>
               <div class="exhibit-room" id="exhibit6"><strong>Exhibit 6:</strong><br>Role of Curanderas</div>
               <div class="exhibit-room" id="exhibit7"><strong>Exhibit 7:</strong><br>Why are they feared?</div>
-              <div class="exhibit-room" id="exhibit8">Exhibit 8</div>
+              <div class="exhibit-room" id="exhibit8"><strong>Exhibit 8:</strong><br>Spiritual Connections</div>
       
               <!-- Exhibit Overlays -->
               <div class="exhibit-overlay" id="exhibit-overlay1">
@@ -347,12 +347,12 @@ document.getElementById("open-button").addEventListener("click", function() {
             <div class="exhibit-overlay" id="exhibit-overlay8">
                 <div class="exhibit-content">
                     <div class="w3-container">
-                        <h2 class="w3-center">title</h2>
-                        <h5>name</h5>
+                        <h2 class="w3-center"><strong>Spiritual Connections</strong></h2>
+                        <h5>Cece W</h5>
                         <div class="w3-row-padding">
                           <div class="w3-half">
                             <div class="w3-padding">
-                              <p>paragraph</p>
+                              <p>Ultima has a spirit animal which is an owl which she has an inseparable link to. It is a symbolic representation of Ultima itself and acts as her messenger and guide. People say owls are usually said to be a disguise taken by witches. But Ultima's owl is a protector.</p>
                             </div>
                             <p><a href="">Source</a></p>
                           </div>
@@ -365,7 +365,7 @@ document.getElementById("open-button").addEventListener("click", function() {
                         </div>
                       </div>  
                     <span onclick="document.getElementById('exhibit-overlay8').style.display='none'"
-                    class="w3-button w3-display-topright">&times;</span> 
+                    class="w3-button w3-display-topright w3-xlarge" style="background-color: transparent">&times;</span> 
                 </div>
             </div>
         </div>
@@ -411,6 +411,8 @@ document.getElementById("open-button").addEventListener("click", function() {
       
       </body>
       </html>
+      
+      
       
       
       
