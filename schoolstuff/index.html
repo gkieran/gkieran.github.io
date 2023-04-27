@@ -28,7 +28,16 @@
 
   gtag('config', 'G-2EL7MPKMQX');
 </script>
+<style>
+    div.balls {
+  margin: 100px auto 0;
+}
+
+</style>
   <body>
+    <div class="balls">
+      <input class="search-container" type="text" id="search-bar" placeholder="Search...">
+      
      <table class="w3-table-all" style="width: fit-content">
     <tr>
       <th>Class</th>
@@ -62,6 +71,43 @@
     </tr>
    
   </table>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Find all the rows in the table
+  var rows = $('table.w3-table-all tr:not(:first-child)');
+  
+  // Add an input event listener to the search bar
+  $('#search-bar').on('input', function() {
+    // Get the search query
+    var query = $(this).val().toLowerCase();
+    
+    // Loop through all the rows
+    rows.each(function(index) {
+      // Get the text content of the row
+      var text = $(this).text().toLowerCase();
+      
+      // Check if the row contains the search query
+      if (text.indexOf(query) !== -1) {
+        // If the row matches the search query, add a border to highlight it and move it to the top of the table
+        $(this).css('border', '2px solid black');
+        $(this).insertAfter('table.w3-table-all tr:first-child');
+      } else {
+        // If the row doesn't match the search query, remove the border
+        $(this).css('border', 'none');
+      }
+    });
+    
+    // If the search bar is empty, remove the border from all rows
+    if (query === '') {
+      rows.css('border', 'none');
+    }
+  });
+});
+
+</script>
 
     
 
