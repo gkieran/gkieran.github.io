@@ -1,1 +1,194 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css" integrity="sha512-Ef5r/bdKQ7JAmVBbTgivSgg3RM+SLRjwU0cAgySwTSv4+jYcVeDukMp+9lZGWT78T4vCUxgT3g+E8t7uabwRuw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>uyghur slideshow</title>
+</head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EL7MPKMQX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2EL7MPKMQX');
+</script>
+<body>
+    <div id="title" class="slide header">
+        <h1 style="font-family: Oxygen, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 80px; text-shadow: 4px 4px 7px black;"><strong>title</strong></h1>
+      </div>
+      
+      <div id="slide1" class="slide">
+        <div class="title" style="width: fit-content; ">
+          <h1><strong>title</strong></h1>
+          
+          <ul>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+          </ul>
+        </div>  
+        
+      </div>
+      <div id="slide2" class="slide">
+        <div class="title" style="width: fit-content; transform: translateX(150px)">
+          <h1><strong>title</strong></h1>
+          <ul>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+          </ul>
+        </div>
+        <img style="transform: translateZ(.4px) scale(0.7) translateX(-135%) translateY(-48%) rotate(-5deg)" src="img/policeandstuff.jpg">
+      </div>
+      <div id="slide3" class="slide">
+        <div class="title">
+          <h1><strong>title</strong></h1>
+          <div class="w3-row">
+            <div class="w3-col s12 m12 l12">
+                
+                <ul>
+                    <li><h4>stuff</h4></li>
+                    <li><h4>stuff</h4></li>
+                    <li><h4>stuff</h4></li>
+                    <li><h4>stuff</h4></li>
+                    <li><h4>stuff</h4></li>
+                </ul>
+            </div>
+            
+          </div>
+            
+          </div>
+        
+      </div>
+      <div id="slide4" class="slide">
+        <div class="title" style="transform: translateY(-150px)">
+          <h1><strong>title</strong></h1>
+          <ul>
+            <li><h4 style="font-size: 20px">stuff</h4></li>
+            <li><h4>stuff</h4></li>
+            <ul>
+              <li><h4>stuff</h4></li>
+              <li><h4>stuff</h4></li>
+              <li><h4>stuff</h4></li>
+              <li><h4>stuff</h4></li>
+              <li><h4>stuff</h4></li>
+              <li><h4>stuff</h4></li>
+            </ul>
+            <li><h4>stuff</h4></li>
+            <li><h4>stuff</h4></li>
+          </ul>
+          </div>
+        <img style="height: auto; width: auto; transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-450px)" src="img/cc_2015.PNG">
+        <img style="height: auto; width: auto; transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-200px)"src="img/cc_2018.PNG">
+        <img style="height: auto; width: auto; transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(50px)"src="img/cc_2020.PNG">
+      </div>  
+      <div id="slide5" class="slide">
+        <div class="title">
+          <h1><strong>title</strong></h1>
+            <ul>
+                <li><h4>stuff</h4></li>
+                <li><h4>stuff</h4></li>
+                <li><h4>stuff</h4></li>
+                <li><h4>stuff</h4></li>
+                <li><h4>stuff</h4></li>
+            </ul>
+        </div>
+       
+      </div>
+     
+      <div id="slide17" class="slide header">
+        <h1 style="font-family: Oxygen, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 70px; text-shadow: 4px 4px 4px black; transform: translateY(-100px)"><strong>Gracias</strong></h1>
+       
+        <div class="w3-center"style="display: flex; flex-wrap: wrap; justify-content: center">
+           <h3 style="font-size: 30px">By Graeme</h3>
+     
+      <script>
+// Get all elements on the page with an ID
+const elements = document.querySelectorAll("[id]");
+
+// Define the keycodes for the left and right arrow keys, and the Page Up and Page Down keys
+const LEFT_ARROW_KEYCODE = 37;
+const RIGHT_ARROW_KEYCODE = 39;
+const PAGE_UP_KEYCODE = 33;
+const PAGE_DOWN_KEYCODE = 34;
+
+// Define a variable to keep track of the current element's index
+let currentIndex = -1;
+
+// Add event listeners for the left and right arrow keys, and the Page Up and Page Down keys
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode === RIGHT_ARROW_KEYCODE || event.keyCode === PAGE_DOWN_KEYCODE) { // right arrow key or Page Down key
+    event.preventDefault(); // prevent default browser behavior
+    // Get the index of the next element with an ID
+    const nextIndex = getNextIndex();
+    // If there is a next element, scroll to it
+    if (nextIndex !== -1) {
+      elements[nextIndex].scrollIntoView({ behavior: "smooth" });
+      currentIndex = nextIndex;
+    }
+  } else if (event.keyCode === LEFT_ARROW_KEYCODE || event.keyCode === PAGE_UP_KEYCODE) { // left arrow key or Page Up key
+    event.preventDefault(); // prevent default browser behavior
+    // Get the index of the previous element with an ID
+    const prevIndex = getPrevIndex();
+    // If there is a previous element, scroll to it
+    if (prevIndex !== -1) {
+      elements[prevIndex].scrollIntoView({ behavior: "smooth" });
+      currentIndex = prevIndex;
+    }
+  }
+});
+
+// Function to get the index of the next element with an ID
+function getNextIndex() {
+  for (let i = currentIndex + 1; i < elements.length; i++) {
+    if (elements[i].id) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+// Function to get the index of the previous element with an ID
+function getPrevIndex() {
+  for (let i = currentIndex - 1; i >= 0; i--) {
+    if (elements[i].id) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+      </script>
+      <script>
+        // add event listener for keydown events
+document.addEventListener("keydown", function(event) {
+  // check if "f" key was pressed and site is focused
+  if (event.key === "f" && document.hasFocus()) {
+    // toggle full screen mode
+    var doc = window.document;
+    var docEl = doc.documentElement;
+    var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+    if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+      requestFullScreen.call(docEl);
+    } else {
+      cancelFullScreen.call(doc);
+    }
+  }
+});
+      </script>
+</body>
+</html>
