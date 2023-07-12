@@ -117,6 +117,24 @@ In addition to the virtual realm, Hoonigan also organizes physical events that s
     </div>
   </footer>
 </body>
-<script src="app.js"></script>
+<script>
+  function scrollToElement(elementId) {
+  const element = document.getElementById(elementId);
+  const offset = 60; // Adjust the offset as needed
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+
+    const elementTop = element.getBoundingClientRect().top;
+    window.scrollBy(0, elementTop - offset);
+  }
+}
+
+
+</script>
 </html>
 
