@@ -1,4 +1,14 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="UTF-8">
+    <title>windows but in snap but not really idk</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
 <div id="bg"style="background-image: url('https://i.redd.it/akcxgyoovec81.jpg');background-size: cover;background-repeat: no-repeat;background-attachment: fixed;margin: 0; /* Remove default body margin */height: 100vh; /* Set body height to the viewport height */overflow: hidden; /* Hide any overflow content */" class="bg-gray-900 text-white h-screen flex justify-center items-center p-4">
     <main>
         <div id="paintWindow" class="bg-white ">
@@ -106,7 +116,8 @@
 
 
 </div>
-<script> //hide windows and make draggable
+<script>
+    //hide windows and make draggable
   $('#paintWindow').draggable({
       handle: '#paintDragHandle',
   });
@@ -325,5 +336,9 @@ $("#infoWindow").toggle();
 let game = document.getElementById('game');
 game.addEventListener('click', function() {
 $("#gameWindow").toggle();        
-})</script>
+})
 
+
+
+</script>
+</html>
