@@ -1,5 +1,4 @@
  //hide windows and make draggable
-document.addEventListener('DOMContentLoaded', function() {
   $('#paintWindow').draggable({
       handle: '#paintDragHandle',
   });
@@ -17,7 +16,6 @@ $('#gameWindow').draggable({
       handle: '#gameDragHandle',
   });
 $("#gameWindow").hide();
-});
 //drawing
 const pencanvas = document.getElementById('canvas');
 const penctx = canvas.getContext('2d');
