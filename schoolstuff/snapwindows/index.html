@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>windows but in snap but not really idk</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<div id="bg"style="background-image: url('https://i.redd.it/akcxgyoovec81.jpg');background-size: cover;background-repeat: no-repeat;background-attachment: fixed;margin: 0; /* Remove default body margin */height: 100vh; /* Set body height to the viewport height */overflow: hidden; /* Hide any overflow content */" class="bg-gray-900 text-white h-screen flex justify-center items-center p-4">
+    <main>
+        <div id="paintWindow" class="bg-white ">
+            <div id="paintDragHandle" class="h-10 w-full bg-gray-200 flex justify-between items-center">
+                <h1 class="text-xl text-black px-3">SnapOS Paint</h1>
+                <button onclick="$('#paintWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="flex justify-center p-10">
+                <canvas id="canvas" class="border-2 border-gray-900" width="400" height="400"></canvas>
+            </div>
+
+            <div class="mt-4 flex justify-center space-x-4 p-5">
+                <input id="penSize" type="range" min="1" max="20" value="3">
+                <input id="colorPicker" type="color" value="#000000">
+                <button id="eraserBtn" class="bg-red-500 text-white px-2 py-1">Eraser</button>
+            </div>
+
+        </div>
+        <div id="settingsWindow" class="bg-white ">
+            <div id="settingsDragHandle" class="h-10 w-full bg-gray-200 flex justify-between items-center">
+                <h1 class="text-xl text-black px-3">SnapOS Settings</h1>
+                <button onclick="$('#settingsWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="flex justify-center p-10 flex-col items-center">
+                <h1 class="text-2xl text-black font-bold mb-4">click an image to use it as the desktop background</h1>
+
+                <div class="space-y-4">
+                    <div class="relative cursor-pointer" onclick="changeBackground('https:/'+'/i.redd.it/akcxgyoovec81.jpg')">
+                        <img src="https://i.redd.it/akcxgyoovec81.jpg" alt="Background 1" class="w-full h-40">
+                    </div>
+                    <div class="relative cursor-pointer" onclick="changeBackground('https:/'+'/wallpaper.dog/large/985727.jpg')">
+                        <img src="https://wallpaper.dog/large/985727.jpg" alt="Background 2" class="w-full h-40">
+                    </div>
+                    <div class="relative cursor-pointer" onclick="changeBackground('https:/'+'/marketplace.canva.com/EAE-xnqWvJk/1/0/1600w/canva-retro-smoke-and-round-light-desktop-wallpapers-JLofAI27pCg.jpg')">
+                        <img src="https://marketplace.canva.com/EAE-xnqWvJk/1/0/1600w/canva-retro-smoke-and-round-light-desktop-wallpapers-JLofAI27pCg.jpg" alt="Background 3" class="w-full h-40">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="infoWindow" class="bg-white ">
+            <div id="infoDragHandle" class="h-10 w-full bg-gray-200 flex justify-between items-center">
+                <h1 class="text-xl text-black px-3">SnapOS Info</h1>
+                <button onclick="$('#infoWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="flex justify-center p-10 flex-col items-center">
+                <h1 class="text-2xl text-black font-bold mb-4">Information</h1>
+                <br>
+                <h2 class="text-xl text-black">Apps:</h2>
+                <ul class="text-black">
+                    <li><strong>Settings</strong>: Change background</li>
+                    <li><strong>Info</strong>: this window</li>
+                    <li><strong>Paint</strong>: unleash your inner picasso (jk you suck at drawing)</li>
+                    <li><strong>Click Alonzo</strong>: Literally the best game in the world</li>
+                </ul>
+                <br>
+                <h2 class="text-xl text-black">Why did you make this</h2>
+                <h2 class="text-l text-gray-800">why not?</h2>
+                <br>
+                <h2 class="text-xl text-black">Isn't this overkill for CSP</h2>
+                <h2 class="text-l text-gray-800">yeah probably but when did i ask lol</h2>
+            </div>
+
+
+
+
+
+        </div>
+        <div id="gameWindow" class="bg-white ">
+            <div id="gameDragHandle" class="h-10 w-full bg-gray-200 flex justify-between items-center">
+                <h1 class="text-xl text-black px-3">SnapOS Click Alonzo</h1>
+                <button onclick="$('#gameWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <button onclick="load(); this.style.display = 'none'" class='text-black btn'>play</button>
+
+
+
+        </div>
+
+    </main>
+    <footer class="h-12 w-screen absolute bottom-0 bg-gray-800 flex flex-row">
+        <button class="btn flex items-center">
+            <i class="fa-brands fa-windows text-3xl px-3"></i>
+        </button>
+        <div class="text-2xl font-semibold px-5 flex items-center text-gray-500">|</div>
+        <button id="settings" class="btn flex items-center p-2">
+            <i class="fa-solid fa-gear text-3xl"></i>
+        </button>
+        <button id="info" class="btn flex items-center p-2">
+            <i class="fa-solid fa-circle-info text-3xl"></i>
+        </button>
+        <button id="paint" class="btn flex items-center p-2">
+            <i class="fa-solid fa-palette text-3xl"></i>
+        </button>
+        <button id="game" class="btn flex items-center p-2">
+            <i class="fa-solid fa-gamepad text-3xl"></i>
+        </button>
+        <div id="clock" class="text-white text-l ml-auto mr-4 flex items-center"></div>
+    </footer>
+
+
+</div>
+<script>
+    //hide windows and make draggable
+document.addEventListener('DOMContentLoaded', function() {
+  $('#paintWindow').draggable({
+      handle: '#paintDragHandle',
+  });
+$("#paintWindow").hide();
+
+$('#settingsWindow').draggable({
+      handle: '#settingsDragHandle',
+  });
+$("#settingsWindow").hide();
+$('#infoWindow').draggable({
+      handle: '#infoDragHandle',
+  });
+$("#infoWindow").hide();
+$('#gameWindow').draggable({
+      handle: '#gameDragHandle',
+  });
+$("#gameWindow").hide();
+});
+//drawing
+const pencanvas = document.getElementById('canvas');
+const penctx = canvas.getContext('2d');
+let isDrawing = false;
+let penSize = 3;
+let penColor = '#000000';
+pencanvas.addEventListener('mousedown', e => {
+  isDrawing = true;
+  const canvasRect = pencanvas.getBoundingClientRect();
+  penctx.beginPath();
+  penctx.moveTo(e.clientX - canvasRect.left, e.clientY - canvasRect.top);
+});
+pencanvas.addEventListener('mousemove', e => {
+  if (isDrawing) {
+    const canvasRect = pencanvas.getBoundingClientRect();
+    penctx.lineTo(e.clientX - canvasRect.left, e.clientY - canvasRect.top);
+    penctx.strokeStyle = penColor;
+    penctx.lineWidth = penSize;
+    penctx.stroke();
+  }
+});
+pencanvas.addEventListener('mouseup', () => (isDrawing = false));
+const penSizeSlider = document.getElementById('penSize');
+penSizeSlider.addEventListener('input', e => {
+  penSize = e.target.value;
+});
+const colorPicker = document.getElementById('colorPicker');
+colorPicker.addEventListener('input', e => {
+  penColor = e.target.value;
+});
+const eraserBtn = document.getElementById('eraserBtn');
+eraserBtn.addEventListener('click', () => {
+  penColor = '#FFFFFF';
+});
+//background
+function changeBackground(url) {
+  document.getElementById('bg').style.backgroundImage = `url('${url}')`;
+};
+//click alonzo
+function load() {
+  document.getElementById("gameWindow").insertAdjacentHTML('beforeend', `
+  <div class="flex justify-center p-10 flex-col items-center">
+      <div class="flex flex-col items-center">
+          <canvas id="gameCanvas" width="800" height="600"></canvas>
+      </div>
+      <div class="flex flex-col justify-center items-start ml-4">
+          <h1 id="points" class="mb-2"></h1>
+          <h1 id="highscore"></h1>
+      </div>
+          
+      </div>
+  `)
+  
+      const canvas = document.getElementById("gameCanvas");
+  const ctx = canvas.getContext("2d");
+  const alonzo = new Image();
+  alonzo.src = "https://github.com/gkieran/gkieran.github.io/blob/main/schoolstuff/clickalonzo/assets/alonzo.png?raw=true";
+  let alonzoX = canvas.width / 2;
+  let alonzoY = canvas.height / 2;
+  let alonzoOpacity = 1;
+  let alonzoMoved = false; 
+  let gameOver = false; 
+  var points = 0;
+  let pointsDisplay = document.getElementById('points');
+  let highscoreDisplay = document.getElementById('highscore');
+  jumpDelay = 2000;
+  function drawAlonzo() {
+      if (gameOver) return;
+      ctx.globalAlpha = alonzoOpacity;
+      if (alonzoX < canvas.width / 2) {
+          ctx.save();
+          ctx.scale(-1, 1);
+          ctx.drawImage(alonzo, -alonzoX - 64, alonzoY, 64, 64);
+          ctx.restore();
+      } else {
+          ctx.drawImage(alonzo, alonzoX, alonzoY, 64, 64);
+      }
+  
+      ctx.globalAlpha = 1; 
+  }
+  function drawGameOver() {
+      ctx.fillStyle = "red";
+      ctx.font = "36px Arial";
+      ctx.fillText("Game Over", canvas.width / 2 - 80, canvas.height / 2);
+  }
+  
+  function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  
+  function getRandomPosition() {
+      const maxX = canvas.width - 64;
+      const maxY = canvas.height - 64;
+      return {
+          x: Math.random() * maxX,
+          y: Math.random() * maxY
+      };
+  }
+  
+  function isMouseOverAlonzo(mouseX, mouseY) {
+      return (
+          mouseX >= alonzoX &&
+          mouseX <= alonzoX + 64 &&
+          mouseY >= alonzoY &&
+          mouseY <= alonzoY + 64
+      );
+  }
+  function updateGame() {
+      clearCanvas();
+      drawAlonzo();
+      if (gameOver) {
+          drawGameOver();
+          return;
+      }
+      requestAnimationFrame(updateGame);
+  }
+  function moveAlonzoRandomly() {
+      if (alonzoOpacity > 0.1) {
+          alonzoOpacity -= 0.1;
+      } else {
+          alonzoOpacity = 0;
+          gameOver = true;
+      }
+  
+      const newPosition = getRandomPosition();
+      alonzoX = newPosition.x;
+      alonzoY = newPosition.y;
+      alonzoMoved = true; 
+  }
+  
+  canvas.addEventListener("click", (event) => {
+      const mouseX = event.clientX - canvas.getBoundingClientRect().left;
+      const mouseY = event.clientY - canvas.getBoundingClientRect().top;
+      
+      if (!gameOver && alonzoMoved && isMouseOverAlonzo(mouseX, mouseY)) {
+          alonzoOpacity += 0.2; 
+          if (alonzoOpacity > 1) {
+              alonzoOpacity = 1; 
+              points = points + 1;
+              highscoreDisplay.textContent = 'Highscore: ' + localStorage.getItem('highscore');
+  
+          hsHandler();
+          }
+          
+          alonzoMoved = false; 
+          clearInterval(moveInterval);
+          moveAlonzoRandomly(); 
+          moveInterval = setInterval(moveAlonzoRandomly, jumpDelay);
+      }
+  });
+  
+  let moveInterval = setInterval(moveAlonzoRandomly, jumpDelay);
+  
+  alonzo.onload = () => {
+      updateGame();
+  };
+  function hsHandler() {
+      pointsDisplay.textContent = 'Points: ' + points;
+      highscoreDisplay.textContent = 'Highscore: ' + localStorage.getItem('highscore');
+  
+      if (!localStorage.getItem('highscore')) {
+          localStorage.setItem('highscore', points);
+      }
+      if (localStorage.getItem('highscore')) {
+          if (points > localStorage.getItem('highscore')) {
+              localStorage.setItem('highscore', points);
+  
+          } else {
+              return;
+          }
+      }
+  
+  }
+  document.addEventListener('DOMContentLoaded', hsHandler())
+  }
+  //clock
+  function updateClock() {
+    const clockElement = document.getElementById("clock");
+    const now = new Date();
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const formattedDate = now.toLocaleDateString('en-US', options);
+    clockElement.textContent = formattedDate;
+}
+setInterval(updateClock, 1000);
+updateClock();
+//taskbar buttons
+let paint = document.getElementById('paint');
+paint.addEventListener('click', function() {
+$("#paintWindow").toggle();        
+});
+let settings = document.getElementById('settings');
+settings.addEventListener('click', function() {
+$("#settingsWindow").toggle();        
+});
+let info = document.getElementById('info');
+info.addEventListener('click', function() {
+$("#infoWindow").toggle();        
+});
+let game = document.getElementById('game');
+game.addEventListener('click', function() {
+$("#gameWindow").toggle();        
+})
+
+
+
+</script>
+</html>
