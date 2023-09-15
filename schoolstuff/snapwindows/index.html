@@ -16,6 +16,7 @@
                 <h1 class="text-xl text-black px-3">SnapOS Paint</h1>
                 <button onclick="$('#paintWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
             </div>
+
             <div class="flex justify-center p-10">
                 <canvas id="canvas" class="border-2 border-gray-900" width="400" height="400"></canvas>
             </div>
@@ -125,6 +126,38 @@
 
 
         </div>
+        <div id="browserWindow" class="bg-white" style="height:900px; width:1600px">
+            <div id="browserDragHandle" class="h-10 w-full bg-gray-200 flex justify-between items-center">
+                <h1 class="text-xl text-black px-3">SnapOS Web Browser</h1>
+                <button onclick="$('#browserWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="flex flex-row align-middle w-full">
+                <input id="searchbar" placeholder="Search for anything (but not really due to CORB)"class="text-black rounded-md border-full border-black border-2 relative top-0 w-full mx-2 h-8 my-3 ">
+<span><button id="enter" class="text-black relative top-0 right-0 p-2 m-2"><i class="fa-solid fa-magnifying-glass"></i></button></span>
+            </div>
+            <iframe id="browserpage" class="h-full w-full"></iframe>
+
+<script>
+let searchbar = document.getElementById("searchbar");
+let searchbtn = document.getElementById('enter');
+searchbtn.addEventListener('click', function() {
+    document.getElementById('browserpage').src = "https://" + searchbar.value;
+});
+document.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {  
+        document.getElementById('browserpage').src = "https://" + searchbar.value;
+
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+    searchbar.value = "";
+    document.getElementById('browserpage').src = "";
+});
+</script>
+
+
+
+        </div>
 
     </main>
     <div id="startmenu" class="absolute bottom-0 left-0 bg-gray-700 h-96 w-56 my-12 px-2">
@@ -152,6 +185,11 @@
             <h1 class="text-xl px-3">Notepad</h1>
 
         </button>   
+        <button id="browser2" class="btn flex items-center p-2">
+            <i class="fa-brands fa-internet-explorer text-2xl"></i>
+            <h1 class="text-xl px-3">Web Browser</h1>
+
+        </button>  
      </div>
 
         <footer class="h-12 w-screen absolute bottom-0 bg-gray-800 flex flex-row">
@@ -173,6 +211,9 @@
         </button>
         <button id="write" class="btn flex items-center p-2">
             <i class="fa-solid fa-pen-to-square text-3xl"></i>
+        </button>
+        <button id="browser" class="btn flex items-center p-2">
+            <i class="fa-brands fa-internet-explorer text-3xl"></i>
         </button>
         <div id="clock" class="text-white text-l ml-auto mr-4 flex items-center"></div>
     </footer>
@@ -207,6 +248,10 @@ $('#textEditWindow').draggable({
   });
 $("#textEditWindow").hide();
 $("#textEditWindow").resizable();
+$('#browserWindow').draggable({
+      handle: '#browserDragHandle',
+  });
+$("#browserWindow").hide();
 $("#startmenu").hide();
 
 //drawing
@@ -415,6 +460,10 @@ let write = document.getElementById('write');
 write.addEventListener('click', function() {
 $("#textEditWindow").toggle();        
 });
+let browser = document.getElementById('browser');
+browser.addEventListener('click', function() {
+$("#browserWindow").toggle();        
+});
 
 let paint2 = document.getElementById('paint2');
 paint2.addEventListener('click', function() {
@@ -439,7 +488,11 @@ $("#textEditWindow").toggle();
 let windows = document.getElementById('windows');
 windows.addEventListener('click', function() {
 $("#startmenu").toggle();        
-})
+});
+let browser2 = document.getElementById('browser2');
+browser2.addEventListener('click', function() {
+$("#browserWindow").toggle();        
+});
 
 
 
