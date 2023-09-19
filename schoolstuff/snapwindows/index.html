@@ -16,6 +16,7 @@
                 <h1 class="text-xl text-black px-3">SnapOS Paint</h1>
                 <button onclick="$('#paintWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
             </div>
+
             <div class="flex justify-center p-10">
                 <canvas id="canvas" class="border-2 border-gray-900" width="400" height="400"></canvas>
             </div>
@@ -74,8 +75,6 @@
                     <li><strong>Info</strong>: this window</li>
                     <li><strong>Paint</strong>: unleash your inner picasso (jk you suck at drawing)</li>
                     <li><strong>Click Alonzo</strong>: Literally the best game in the world</li>
-                    <li><strong>Notepad</strong>: Write some cool poetry (jk you suck at writing)</li>
-                    <li><strong>Browser</strong>: somewhat working browser (can load snap at least)</li>
                 </ul>
                 <br>
                 <h2 class="text-xl text-black">Why did you make this</h2>
@@ -159,7 +158,73 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         </div>
-
+        <div id="codeWindow" class="bg-white text-black" style="height:825px; width:1600px">
+            <div id="codeDragHandle" class="h-10 w-full bg-gray-200 flex justify-between items-center">
+                <h1 class="text-xl text-black px-3">SnapOS Code</h1>
+                <button onclick="$('#codeWindow').hide();" class="bg-gray-200 p-2 text-black hover:bg-red-500 hover:text-white">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        <div class="flex">
+            <div class="w-1/3 p-4">
+                <div class="mb-4">
+                    <label for="html" class="block text-gray-700 text-sm font-bold mb-2">HTML</label>
+                    <textarea id="html" class="w-full h-32 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Enter HTML code..."></textarea>
+                </div>
+        
+                <div class="mb-4">
+                    <label for="css" class="block text-gray-700 text-sm font-bold mb-2">CSS</label>
+                    <textarea id="css" class="w-full h-32 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Enter CSS code..."></textarea>
+                </div>
+        
+                <div class="mb-4">
+                    <label for="js" class="block text-gray-700 text-sm font-bold mb-2">JavaScript</label>
+                    <textarea id="js" class="w-full h-32 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Enter JavaScript code..."></textarea>
+                </div>
+        
+                <div>
+                    <button id="runButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Run</button>
+                </div>
+            </div>
+        
+            <div class="w-2/3 h-full">
+                <h2 class="text-xl font-semibold mb-2">Result</h2>
+                <iframe id="resultFrame" class="w-full h-full border"></iframe>
+            </div>
+        
+            <script>
+                const runButton = document.getElementById("runButton");
+                const htmlTextarea = document.getElementById("html");
+                const cssTextarea = document.getElementById("css");
+                const jsTextarea = document.getElementById("js");
+                const resultFrame = document.getElementById("resultFrame");
+        
+                runButton.addEventListener("click", () => {
+                    const htmlCode = htmlTextarea.value;
+                    const cssCode = `<style>${cssTextarea.value}</style>`;
+                    const jsCode = `<scr${"ipt"}>${jsTextarea.value}</scr${"ipt"}>`; 
+                    const fullHTML = `<!DOCTYPE html>
+                    <html>
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Result</title>
+                        ${cssCode}
+                    </head>
+                    <body>
+                        ${htmlCode}
+                        ${jsCode}
+                    </body>
+                    </html>`;
+                    resultFrame.srcdoc = fullHTML;
+                });
+            </script>
+        </div>
+        </div>
+        
+    
+       
+    
+       
     </main>
     <div id="startmenu" class="absolute bottom-0 left-0 bg-gray-700 h-96 w-56 my-12 px-2">
                 <button id="settings2" class="btn flex items-center p-2">
@@ -189,8 +254,11 @@ document.addEventListener('DOMContentLoaded', function() {
         <button id="browser2" class="btn flex items-center p-2">
             <i class="fa-brands fa-internet-explorer text-2xl"></i>
             <h1 class="text-xl px-3">Web Browser</h1>
-
         </button>  
+        <button id="code2" class="btn flex items-center p-2">
+            <i class="fas fa-code text-2xl"></i>
+            <h1 class="text-xl px-3">Code Editor</h1>
+        </button> 
      </div>
 
         <footer class="h-12 w-screen absolute bottom-0 bg-gray-800 flex flex-row">
@@ -216,6 +284,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <button id="browser" class="btn flex items-center p-2">
             <i class="fa-brands fa-internet-explorer text-3xl"></i>
         </button>
+        <button id="code" class="btn flex items-center p-2">
+            <i class="fas fa-code text-2xl"></i>
+        </button> 
         <div id="clock" class="text-white text-l ml-auto mr-4 flex items-center"></div>
     </footer>
 
@@ -253,6 +324,10 @@ $('#browserWindow').draggable({
       handle: '#browserDragHandle',
   });
 $("#browserWindow").hide();
+$('#codeWindow').draggable({
+      handle: '#codeDragHandle',
+  });
+$("#codeWindow").hide();
 $("#startmenu").hide();
 
 //drawing
@@ -465,6 +540,10 @@ let browser = document.getElementById('browser');
 browser.addEventListener('click', function() {
 $("#browserWindow").toggle();        
 });
+let code = document.getElementById('code');
+code.addEventListener('click', function() {
+$("#codeWindow").toggle();        
+});
 
 let paint2 = document.getElementById('paint2');
 paint2.addEventListener('click', function() {
@@ -494,7 +573,10 @@ let browser2 = document.getElementById('browser2');
 browser2.addEventListener('click', function() {
 $("#browserWindow").toggle();        
 });
-
+let code2 = document.getElementById('code2');
+code2.addEventListener('click', function() {
+$("#codeWindow").toggle();        
+});
 
 
 </script>
