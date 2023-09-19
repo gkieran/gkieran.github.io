@@ -37,7 +37,7 @@
             <div class="flex justify-center p-10 flex-col items-center">
                 <h1 class="text-2xl text-black font-bold mb-4">Click an image to use it as the desktop background</h1>
         
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-3 gap-4">
                     <div class="relative cursor-pointer col-span-1" onclick="changeBackground('https:/'+'/i.redd.it/akcxgyoovec81.jpg')">
                         <img src="https://i.redd.it/akcxgyoovec81.jpg" alt="Background 1" class="w-full h-40">
                     </div>
@@ -58,6 +58,33 @@
                     </div>
                 </div>
             </div>
+            <div class="flex justify-center p-10 flex-col items-center">
+                <h1 class="text-2xl text-black font-bold mb-4">Upload a custom image or use a link</h1>
+                <input id="customImage" type="file" accept="image/png, image/jpg, image/jpeg"class="text-black">
+                <input id="imageLink" type="text" placeholder="paste a link..."class="text-black">
+            </div>
+            <script>
+                let customImage = document.getElementById('customImage');
+                customImage.addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            const base64String = event.target.result;
+            document.getElementById('bg').style.backgroundImage = `url(${base64String})`;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+document.getElementById('imageLink').addEventListener('blur', function (e) {
+    const imageUrl = e.target.value.trim();
+
+    if (imageUrl) {
+        document.getElementById('bg').style.backgroundImage = `url(${imageUrl})`
+    }
+});
+            </script>
         </div>
         
         <div id="infoWindow" class="bg-white ">
